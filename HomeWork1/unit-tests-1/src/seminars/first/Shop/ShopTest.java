@@ -13,18 +13,18 @@ public class ShopTest {
    3. Напишите тесты для проверки корректности работы метода sortProductsByPrice (проверьте правильность сортировки).
    */
     public static void main(String[] args) {
-        List<Product> myProducts= new ArrayList<Product>();
-        Product expensiveProduct=null;
+        List<Product> myProducts = new ArrayList<Product>();
+        Product expensiveProduct = null;
 
-        Product prod1=new Product();
+        Product prod1 = new Product();
         prod1.setTitle("Апельсины");
         prod1.setCost(100);
 
-        Product prod2=new Product();
+        Product prod2 = new Product();
         prod2.setTitle("Бананы");
         prod2.setCost(90);
 
-        Product prod3=new Product();
+        Product prod3 = new Product();
         prod3.setTitle("Яблоки");
         prod3.setCost(80);
 
@@ -46,10 +46,10 @@ public class ShopTest {
         */
 
         assertThat(myShop.getProducts()).hasSize(3);
-        assertThat(myShop.getProducts()).contains(prod1,prod2,prod3);
-        assertThat(myShop.getProducts()).containsSequence(prod1,prod2,prod3);
+        assertThat(myShop.getProducts()).contains(prod1, prod2, prod3);
+        assertThat(myShop.getProducts()).containsSequence(prod1, prod2, prod3);
 
-        expensiveProduct=myShop.getMostExpensiveProduct();
+        expensiveProduct = myShop.getMostExpensiveProduct();
 
         assertThat(expensiveProduct).isEqualTo(prod1);
 
@@ -60,10 +60,10 @@ public class ShopTest {
 //        myShop.printProducts();
 
         assertThat(myShop.getProducts()).hasSize(3);
-        assertThat(myShop.getProducts()).contains(prod1,prod2,prod3);
-        assertThat(myShop.getProducts()).containsSequence(prod3,prod2,prod1);
+        assertThat(myShop.getProducts()).contains(prod1, prod2, prod3);
+        assertThat(myShop.getProducts()).containsSequence(prod3, prod2, prod1);
 
-        expensiveProduct=myShop.getMostExpensiveProduct();
+        expensiveProduct = myShop.getMostExpensiveProduct();
 
         assertThat(expensiveProduct).isEqualTo(prod1);
 

@@ -8,9 +8,9 @@ import static org.assertj.core.api.Assertions.*;
 public class CalculatorTest {
     public static void main(String[] args) {
         // Проверка домашнего задания 1
-        assertThat(Calculator.calculatingDiscount(1000,0)).isEqualTo(1000);
-        assertThat(Calculator.calculatingDiscount(1000,10)).isEqualTo(900);
-        assertThat(Calculator.calculatingDiscount(1000,15)).isEqualTo(850);
+        assertThat(Calculator.calculatingDiscount(1000, 0)).isEqualTo(1000);
+        assertThat(Calculator.calculatingDiscount(1000, 10)).isEqualTo(900);
+        assertThat(Calculator.calculatingDiscount(1000, 15)).isEqualTo(850);
         assertThatThrownBy(() -> Calculator.calculatingDiscount(1000, -1)).isInstanceOf(ArithmeticException.class);
         assertThatThrownBy(() -> Calculator.calculatingDiscount(1000, 100)).isInstanceOf(ArithmeticException.class);
         assertThatThrownBy(() -> Calculator.calculatingDiscount(1000, 100000)).isInstanceOf(ArithmeticException.class);
