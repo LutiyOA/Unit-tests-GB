@@ -20,5 +20,12 @@ public class User {
         return this.isAuthenticate;
     }
 
+    public boolean unAuthenticate() {
+//        Какие-то дополнительные действия, например освобождение ресурсов
+        isAuthenticate = false;
+        return true;
+
+    }
+
 
 }

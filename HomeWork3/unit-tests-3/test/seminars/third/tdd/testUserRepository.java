@@ -9,6 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class testUserRepository {
     private UserRepository userRepository;
 
+    /**
+     * Подготовка состояния системы перед тестированием
+     */
     @BeforeEach
     public void beforeEach() {
         userRepository = new UserRepository();
@@ -20,6 +23,9 @@ public class testUserRepository {
         userRepository.authenticateUser("User","12345678");
     }
 
+    /**
+     * Тестирование метода принудительного выхода всех не администраторов
+     */
     @Test
     public void testUnLoginUsersExceptAdmin() {
         userRepository.unLoginAllUsersExceptAdmin();

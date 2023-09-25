@@ -26,7 +26,7 @@ public class UserRepository {
     public void unLoginAllUsersExceptAdmin() {
         for (User user : data) {
             if (!user.isAdmin)
-                user.isAuthenticate = false;
+                user.unAuthenticate();
         }
     }
 
